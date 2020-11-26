@@ -1,0 +1,41 @@
+<%- include("partials/header.ejs") %>
+<div class="title-section">
+    <div class="title-button">
+        <a class="btn btn-primary" href="/register">Get Started</a>
+    </div>
+
+</div>
+
+<div class="homethoughts ">
+    <div class="row">
+        <% for(var i=0;i<doc.length;i++){ %>
+        <div class="blog col-lg-6">
+            <div class="eachblogs">
+                <h1 class="titleblog"><%=doc[i].title %> </h1>
+
+                <h2 class="titledes"><%=doc[i].description.substring(0,100) %> </h2><span> <a
+                        href="/sb/<%=doc[i].title %>">...readmore</a></span>
+
+                <h5 class="author"><%=doc[i].author %></h5>
+                <form action="/likeincrement" method="post">
+                    
+                    <button type="submit" name="title"
+                        value="<%=doc[i].title %>" id="<%=doc[i].title %>">like</button>
+
+</form>
+
+
+                    <h6 class="likes"><%=doc[i].likes %></h6>
+            </div>
+
+        </div>
+
+
+        <% } %>
+    </div>
+
+</div>
+
+
+
+<%-include("partials/footer.ejs")-%>

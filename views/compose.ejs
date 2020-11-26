@@ -1,0 +1,25 @@
+<%- include("partials/header.ejs") %>
+<form action="/compose" method="POST">
+    <div class="form-group"> <label>Title</label>
+        <input class="form-control" type="text" name="title" placeholder="Enter Your title" required>
+    </div>
+    <div class="form-group">
+        <label>description</label>
+        <textarea class="form-control" name="description" id="" cols="20" rows="5" placeholder="Enter the description"
+            required></textarea>
+    </div>
+    <div class="form-group"> <label>Author Name</label>
+        <input class="form-control" type="text" name="author" placeholder="Name of the author" required></div>
+
+    <div class="form-group"><label>category</label>
+        <input class="form-control" type="text" name="category" placeholder="Enter the category" required></div>
+
+
+
+    <input class="btn btn-primary" type="submit" value="Submit">
+</form>
+
+<script src="" async defer></script>
+</body>
+
+</html>

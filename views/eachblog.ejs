@@ -1,0 +1,16 @@
+<%- include("partials/header.ejs") %>
+<div>
+    <% for(var i=0;i<doc.length;i++){ %> 
+     <div class="blog">
+         <h1 class="titleblog"><%=doc[i].title %> </h1>
+         <h2 class="titledes"><%=doc[i].description %> </h2>
+       
+         <h5 class="author"><%=doc[i].author %></h5>
+         <h6 class="likes"><%=doc[i].likes %></h6>
+         
+     </div>
+
+    <% } %> 
+</div>
+
+<%-include("partials/footer.ejs")-%>
